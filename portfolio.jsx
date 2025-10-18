@@ -1,108 +1,112 @@
-import React from "react";
-<p className="text-sm mt-1">Web & Mobil</p>
-</div>
-</div>
-</div>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portfolyo | Adınız Soyadınız</title>
+<style>
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+body {background: #0f172a; color: #e2e8f0; line-height: 1.6;}
+header {display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background: #1e293b; position: sticky; top: 0;}
+header h1 {font-size: 24px; color: #38bdf8;}
+nav a {color: #e2e8f0; margin-left: 20px; text-decoration: none; transition: color 0.3s;}
+nav a:hover {color: #38bdf8;}
 
 
-<div className="order-first md:order-last flex justify-center md:justify-end">
-{/* Profil görseli yerine şık bir placeholder kart */}
-<div className="w-48 h-48 rounded-2xl bg-gradient-to-tr from-slate-700 to-slate-600 p-1">
-<div className="w-full h-full rounded-2xl bg-slate-900 flex items-center justify-center">
-<span className="text-slate-400">Fotoğraf</span>
-</div>
-</div>
-</div>
-</section>
+.hero {display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 80px 60px;}
+.hero-text {max-width: 600px;}
+.hero-text h2 {font-size: 42px; margin-bottom: 20px; color: #f8fafc;}
+.hero-text p {margin-bottom: 20px; color: #cbd5e1;}
+.hero-buttons a {display: inline-block; margin-right: 15px; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 500;}
+.btn-primary {background: #38bdf8; color: #0f172a;}
+.btn-secondary {border: 1px solid #38bdf8; color: #38bdf8;}
 
 
-{/* Projects */}
-<section id="projects" className="mt-16">
-<h3 className="text-2xl font-bold">Projeler</h3>
-<p className="text-slate-300 mt-2">Aşağıda seçtiğim bazı çalışmalarım yer alıyor. Daha fazlası için bana ulaşabilirsiniz.</p>
+.photo {width: 200px; height: 200px; border-radius: 50%; background: #1e293b; display: flex; align-items: center; justify-content: center; color: #94a3b8;}
 
 
-<div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-{projects.map(p => (
-<article key={p.id} className="rounded-xl bg-gradient-to-b from-slate-800 to-slate-700 p-5 shadow-lg">
-<h4 className="font-semibold">{p.title}</h4>
-<p className="text-sm text-slate-300 mt-2">{p.description}</p>
-<div className="mt-3 flex flex-wrap gap-2">
-{p.tech.map(t => (
-<span key={t} className="text-xs border border-slate-600 rounded-full px-2 py-1">{t}</span>
-))}
-</div>
-<div className="mt-4 flex items-center justify-between">
-<a href={p.link} className="text-sm hover:underline">Detaylar</a>
-<a href={p.link} className="text-sm rounded-md bg-slate-900 px-3 py-1 border border-slate-600">GitHub / Canlı</a>
-</div>
-</article>
-))}
-</div>
-</section>
+section {padding: 60px; max-width: 1100px; margin: auto;}
+h3 {font-size: 28px; margin-bottom: 10px; color: #f1f5f9;}
+.section-desc {color: #94a3b8; margin-bottom: 30px;}
 
 
-{/* Skills */}
-<section id="skills" className="mt-16">
-<h3 className="text-2xl font-bold">Yetkinlikler</h3>
-<p className="text-slate-300 mt-2">Teknolojiler ve çalışma alanlarım.</p>
+.projects {display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;}
+.project {background: #1e293b; padding: 20px; border-radius: 10px; transition: transform 0.3s;}
+.project:hover {transform: translateY(-5px);}
+.project h4 {margin-bottom: 10px; color: #38bdf8;}
+.project p {font-size: 14px; color: #cbd5e1; margin-bottom: 10px;}
 
 
-<div className="mt-4 flex flex-wrap gap-3">
-{skills.map(s => (
-<div key={s} className="px-3 py-2 bg-slate-800 rounded-md text-sm">{s}</div>
-))}
-</div>
-</section>
+.skills {display: flex; flex-wrap: wrap; gap: 10px;}
+.skill {background: #1e293b; padding: 10px 15px; border-radius: 6px; color: #e2e8f0; font-size: 14px;}
 
 
-{/* Contact */}
-<section id="contact" className="mt-16">
-<h3 className="text-2xl font-bold">İletişim</h3>
-<p className="text-slate-300 mt-2">Projeler veya işbirlikleri için bana yazın.</p>
+.contact-grid {display: grid; grid-template-columns: 1fr 1fr; gap: 20px;}
+form {background: #1e293b; padding: 20px; border-radius: 10px;}
+label {display: block; font-size: 14px; color: #cbd5e1; margin-top: 10px;}
+input, textarea {width: 100%; margin-top: 5px; padding: 10px; border-radius: 6px; border: none; background: #334155; color: #f8fafc;}
+button {margin-top: 15px; background: #38bdf8; color: #0f172a; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer;}
+button:hover {background: #7dd3fc;}
 
 
-<div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-<div className="rounded-xl bg-slate-800 p-6">
-<p className="text-sm text-slate-300">E-posta</p>
-<p className="mt-1">emailiniz@ornek.com</p>
-
-
-<p className="text-sm text-slate-300 mt-4">Telefon</p>
-<p className="mt-1">+90 5xx xxx xx xx</p>
-
-
-<div className="mt-6 flex gap-3">
-<a href="#" aria-label="LinkedIn" className="text-sm hover:underline">LinkedIn</a>
-<a href="#" aria-label="GitHub" className="text-sm hover:underline">GitHub</a>
-<a href="#" aria-label="Twitter" className="text-sm hover:underline">Twitter</a>
-</div>
-</div>
-
-
-<form className="rounded-xl bg-slate-800 p-6" onSubmit={(e) => { e.preventDefault(); window.location.href = 'mailto:emailiniz@ornek.com?subject=Portfolyo+İletişim'; }}>
-<label className="text-sm text-slate-300">Adınız</label>
-<input className="w-full mt-2 p-2 rounded-md bg-slate-700 border border-slate-600" placeholder="Adınız" />
-
-
-<label className="text-sm text-slate-300 mt-4 block">E-posta</label>
-<input className="w-full mt-2 p-2 rounded-md bg-slate-700 border border-slate-600" placeholder="eposta@ornek.com" />
-
-
-<label className="text-sm text-slate-300 mt-4 block">Mesaj</label>
-<textarea className="w-full mt-2 p-2 rounded-md bg-slate-700 border border-slate-600" rows={4} placeholder="Mesajınız..." />
-
-
-<button type="submit" className="mt-4 rounded-md bg-sky-500 px-4 py-2 text-slate-900">Gönder</button>
-</form>
-</div>
-</section>
-
-
-<footer className="mt-20 border-t border-slate-700 pt-6 pb-10 text-center text-slate-400">
-<p>© {new Date().getFullYear()} {name} — Tüm hakları saklıdır.</p>
-</footer>
-</main>
-</div>
-);
+footer {text-align: center; padding: 20px; background: #1e293b; color: #94a3b8; margin-top: 60px;}
+@media (max-width: 768px) {
+.hero {flex-direction: column; text-align: center;}
+.contact-grid {grid-template-columns: 1fr;}
+header {flex-direction: column; gap: 10px;}
 }
+</style>
+</head>
+<body>
+<header>
+<h1>Adınız Soyadınız</h1>
+<nav>
+<a href="#projects">Projeler</a>
+<a href="#skills">Yetkinlikler</a>
+<a href="#contact">İletişim</a>
+<a href="cv.pdf" download>CV İndir</a>
+</nav>
+</header>
+
+
+<section class="hero">
+<div class="hero-text">
+<h2>Full Stack Yazılım Geliştirici</h2>
+<p>Modern web teknolojileriyle ölçeklenebilir, kullanıcı dostu yazılımlar geliştiriyorum. Aşağıda projelerimi ve yetkinliklerimi inceleyebilirsiniz.</p>
+<div class="hero-buttons">
+<a href="#contact" class="btn-primary">İletişime Geç</a>
+<a href="#projects" class="btn-secondary">Projelerimi Gör</a>
+</div>
+</div>
+<div class="photo">Fotoğraf</div>
+</section>
+
+
+<section id="projects">
+<h3>Projeler</h3>
+<p class="section-desc">Bazı seçilmiş çalışmalarım:</p>
+<div class="projects">
+<div class="project">
+<h4>Proje 1 - Web Uygulaması</h4>
+<p>React + Node.js tabanlı bir tam yığın web uygulaması. Gerçek zamanlı veri akışı içerir.</p>
+<a href="#" style="color:#38bdf8; font-size:14px;">GitHub / Canlı</a>
+</div>
+<div class="project">
+<h4>Proje 2 - Mobil Uygulama</h4>
+<p>React Native ile geliştirilen, offline-first mimariye sahip uygulama.</p>
+<a href="#" style="color:#38bdf8; font-size:14px;">GitHub / Canlı</a>
+</div>
+<div class="project">
+<h4>Proje 3 - Veri Görselleştirme</h4>
+<p>Büyük veri setleri için etkileşimli grafikler ve rapor ekranları.</p>
+<a href="#" style="color:#38bdf8; font-size:14px;">GitHub / Canlı</a>
+</div>
+</div>
+</section>
+
+
+<section id="skills">
+<h3>Yetkinlikler</h3>
+<p class="section-desc">Kullandığım teknolojiler:</p>
+<div class="skills">
+</html>
